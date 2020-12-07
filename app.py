@@ -15,9 +15,9 @@ def home():
 def showschema():
     df = spark_db_connct()
 
-    sqldf = df.sql("select * from session limit 5").show()
+    spark_df = df.sql("select * from user limit 100000").show()
     
-    return 'cool'
+    return spark_df
 
 
 if __name__ == "__main__":
